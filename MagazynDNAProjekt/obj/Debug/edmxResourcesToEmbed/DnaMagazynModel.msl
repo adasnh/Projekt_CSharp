@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DnaDatabaseModelStoreContainer" CdmEntityContainer="DnaDatabaseEntities2">
+    <EntitySetMapping Name="artykuly">
+      <EntityTypeMapping TypeName="DnaDatabaseModel.artykuly">
+        <MappingFragment StoreEntitySet="artykuly">
+          <ScalarProperty Name="id_artykulu" ColumnName="id_artykulu" />
+          <ScalarProperty Name="nazwa" ColumnName="nazwa" />
+          <ScalarProperty Name="koszt_zakup" ColumnName="koszt_zakup" />
+          <ScalarProperty Name="ilosc_sztuk" ColumnName="ilosc_sztuk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pracownicy">
+      <EntityTypeMapping TypeName="DnaDatabaseModel.pracownicy">
+        <MappingFragment StoreEntitySet="pracownicy">
+          <ScalarProperty Name="id_pracownika" ColumnName="id_pracownika" />
+          <ScalarProperty Name="imie" ColumnName="imie" />
+          <ScalarProperty Name="nazwisko" ColumnName="nazwisko" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uzytkownicy">
+      <EntityTypeMapping TypeName="DnaDatabaseModel.uzytkownicy">
+        <MappingFragment StoreEntitySet="uzytkownicy">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nazwa" ColumnName="nazwa" />
+          <ScalarProperty Name="haslo" ColumnName="haslo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="rola" ColumnName="rola" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wydania">
+      <EntityTypeMapping TypeName="DnaDatabaseModel.wydania">
+        <MappingFragment StoreEntitySet="wydania">
+          <ScalarProperty Name="id_zamowienia" ColumnName="id_zamowienia" />
+          <ScalarProperty Name="id_artykulu" ColumnName="id_artykulu" />
+          <ScalarProperty Name="id_pracownika" ColumnName="id_pracownika" />
+          <ScalarProperty Name="ilosc_sztuk" ColumnName="ilosc_sztuk" />
+          <ScalarProperty Name="data_wydania" ColumnName="data_wydania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
