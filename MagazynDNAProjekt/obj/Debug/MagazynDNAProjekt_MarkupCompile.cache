@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\adasn\source\repos\MagazynDNAProjekt\MagazynDNAProjekt\App.xaml
-22037783069
+9152467596
 41946224286
-13-344023385
+20554306200
 30-1244235755
-LoginWindow.xaml;MainWindow.xaml;
+AddItem.xaml;AddWorker.xaml;ElectroRentalsList.xaml;GiveItem.xaml;ListOfItems.xaml;LoginWindow.xaml;MainWindow.xaml;RentElectro.xaml;ReturnElectro.xaml;
 
 False
 

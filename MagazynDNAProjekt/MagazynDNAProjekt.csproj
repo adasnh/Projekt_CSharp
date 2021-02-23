@@ -106,6 +106,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddItem.xaml.cs">
+      <DependentUpon>AddItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddWorker.xaml.cs">
+      <DependentUpon>AddWorker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="artykuly.cs">
       <DependentUpon>DnaMagazynModel.tt</DependentUpon>
     </Compile>
@@ -114,11 +120,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DnaMagazynModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ElectroRentalsList.xaml.cs">
+      <DependentUpon>ElectroRentalsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GiveItem.xaml.cs">
+      <DependentUpon>GiveItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfItems.xaml.cs">
+      <DependentUpon>ListOfItems.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="pracownicy.cs">
       <DependentUpon>DnaMagazynModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RentElectro.xaml.cs">
+      <DependentUpon>RentElectro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnElectro.xaml.cs">
+      <DependentUpon>ReturnElectro.xaml</DependentUpon>
     </Compile>
     <Compile Include="uzytkownicy.cs">
       <DependentUpon>DnaMagazynModel.tt</DependentUpon>
@@ -126,6 +147,26 @@
     <Compile Include="wydania.cs">
       <DependentUpon>DnaMagazynModel.tt</DependentUpon>
     </Compile>
+    <Page Include="AddItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElectroRentalsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GiveItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListOfItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -149,6 +190,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentElectro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReturnElectro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,6 +239,7 @@
   <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\Dna_logo_male.png" />
+    <Resource Include="Assets\Magazyn_border.jpg" />
     <Content Include="DnaDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
