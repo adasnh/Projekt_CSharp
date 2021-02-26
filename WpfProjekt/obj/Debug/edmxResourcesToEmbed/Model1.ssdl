@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GiveAway">
+    <Key>
+      <PropertyRef Name="id_zamowienia" />
+    </Key>
+    <Property Name="id_zamowienia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_artykulu" Type="int" Nullable="false" />
+    <Property Name="id_pracownika" Type="int" Nullable="false" />
+    <Property Name="ilosc_sztuk" Type="int" Nullable="false" />
+    <Property Name="data_wydania" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="id_artykulu" />
+    </Key>
+    <Property Name="id_artykulu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nazwa" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="koszt_zakupu" Type="money" Nullable="false" />
+    <Property Name="ilosc_sztuk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nazwa" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="haslo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="rola" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imie" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nazwisko" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__GiveAway__id_art__38996AB5">
+    <End Role="Items" Type="Self.Items" Multiplicity="1" />
+    <End Role="GiveAway" Type="Self.GiveAway" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="id_artykulu" />
+      </Principal>
+      <Dependent Role="GiveAway">
+        <PropertyRef Name="id_artykulu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GiveAway__id_pra__398D8EEE">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+    <End Role="GiveAway" Type="Self.GiveAway" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiveAway">
+        <PropertyRef Name="id_pracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="GiveAway" EntityType="Self.GiveAway" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workers" EntityType="Self.Workers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__GiveAway__id_art__38996AB5" Association="Self.FK__GiveAway__id_art__38996AB5">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="GiveAway" EntitySet="GiveAway" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GiveAway__id_pra__398D8EEE" Association="Self.FK__GiveAway__id_pra__398D8EEE">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="GiveAway" EntitySet="GiveAway" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GiveAway">
+    <Key>
+      <PropertyRef Name="id_zamowienia" />
+    </Key>
+    <Property Name="id_zamowienia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_artykulu" Type="Int32" Nullable="false" />
+    <Property Name="id_pracownika" Type="Int32" Nullable="false" />
+    <Property Name="ilosc_sztuk" Type="Int32" Nullable="false" />
+    <Property Name="data_wydania" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Items" Relationship="Self.FK__GiveAway__id_art__38996AB5" FromRole="GiveAway" ToRole="Items" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK__GiveAway__id_pra__398D8EEE" FromRole="GiveAway" ToRole="Workers" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="id_artykulu" />
+    </Key>
+    <Property Name="id_artykulu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nazwa" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="koszt_zakupu" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ilosc_sztuk" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GiveAway" Relationship="Self.FK__GiveAway__id_art__38996AB5" FromRole="Items" ToRole="GiveAway" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="haslo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="rola" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="GiveAway" Relationship="Self.FK__GiveAway__id_pra__398D8EEE" FromRole="Workers" ToRole="GiveAway" />
+  </EntityType>
+  <Association Name="FK__GiveAway__id_art__38996AB5">
+    <End Role="Items" Type="Self.Items" Multiplicity="1" />
+    <End Role="GiveAway" Type="Self.GiveAway" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="id_artykulu" />
+      </Principal>
+      <Dependent Role="GiveAway">
+        <PropertyRef Name="id_artykulu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GiveAway__id_pra__398D8EEE">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+    <End Role="GiveAway" Type="Self.GiveAway" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiveAway">
+        <PropertyRef Name="id_pracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GiveAway" EntityType="Self.GiveAway" />
+    <EntitySet Name="Items" EntityType="Self.Items" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Workers" EntityType="Self.Workers" />
+    <AssociationSet Name="FK__GiveAway__id_art__38996AB5" Association="Self.FK__GiveAway__id_art__38996AB5">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="GiveAway" EntitySet="GiveAway" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GiveAway__id_pra__398D8EEE" Association="Self.FK__GiveAway__id_pra__398D8EEE">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="GiveAway" EntitySet="GiveAway" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
