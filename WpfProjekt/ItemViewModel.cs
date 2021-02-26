@@ -8,12 +8,17 @@ namespace WpfProjekt
 {
     class ItemViewModel
     {
+        /// <summary>
+        /// Publiczne property klasy ItemViewModel
+        /// </summary>
         public int idart { get; set; }
         public string nazwa { get; set; }
         public decimal koszt { get; set; }
         public int ilosc { get; set; }
 
-
+        /// <summary>
+        /// Publiczny Konstruktor klasy ItemViewModel
+        /// </summary>
         public ItemViewModel(Items item)
         {
             idart = item.id_artykulu;

@@ -19,13 +19,16 @@ using System.Configuration;
 namespace WpfProjekt
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Logika dla klasy LoginWindow
     /// </summary>
     public partial class LoginWindow : Window
     {
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
+        /// <summary>
+        /// Publiczny konstruktor LoginWindow
+        /// </summary>
         public LoginWindow()
         {
             InitializeComponent();

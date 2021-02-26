@@ -17,12 +17,15 @@ using System.Windows.Shapes;
 namespace WpfProjekt
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika dla klasy MainWindow
     /// </summary>
     public partial class MainWindow : Window
     {
 
         Database1Entities2 db = new Database1Entities2();
+        /// <summary>
+        /// Publiczny Konstruktor MainWindow
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

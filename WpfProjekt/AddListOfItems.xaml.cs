@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace WpfProjekt
 {
     /// <summary>
-    /// Interaction logic for AddListOfItems.xaml
+    /// Logika dla klasy AddListOfItems
     /// </summary>
     public partial class AddListOfItems : Window
     {

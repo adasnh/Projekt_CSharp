@@ -20,6 +20,7 @@ C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\bin\Debug\System.Configuration
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\bin\Debug\System.Security.AccessControl.xml
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\bin\Debug\System.Security.Permissions.xml
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\WpfProjekt.csprojAssemblyReference.cache
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\AddItem.g.cs
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\AddListOfItems.g.cs
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\AddWorker.g.cs
@@ -44,4 +45,3 @@ C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\WpfProjekt.csproj.Co
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\WpfProjekt.csproj.CopyComplete
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\WpfProjekt.exe
 C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\WpfProjekt.pdb
-C:\Users\adasn\source\repos\WpfProjekt\WpfProjekt\obj\Debug\WpfProjekt.csprojAssemblyReference.cache

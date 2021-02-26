@@ -16,11 +16,14 @@ using System.Windows.Shapes;
 namespace WpfProjekt
 {
     /// <summary>
-    /// Interaction logic for AddItem.xaml
+    /// Logika dla klasy AddItem
     /// </summary>
     public partial class AddItem : Window
     {
         Database1Entities2 db = new Database1Entities2();
+        /// <summary>
+        /// Publiczny konstruktor klasy AddItem
+        /// </summary>
         public AddItem()
         {
             InitializeComponent();

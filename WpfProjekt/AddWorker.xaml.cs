@@ -16,16 +16,21 @@ using System.Windows.Shapes;
 namespace WpfProjekt
 {
     /// <summary>
-    /// Interaction logic for AddWorker.xaml
+    /// Logika dla klasy AddWorker
     /// </summary>
     public partial class AddWorker : Window
     {
+        /// <summary>
+        /// Publiczne property
+        /// </summary>
         public string imie { get; set; }
         public string nazwisko { get; set; }
 
         private int UpdatingWorkerId = 0;
-
         Database1Entities2 db = new Database1Entities2();
+        /// <summary>
+        /// Publiczny konstruktor klasy AddWorker
+        /// </summary>
         public AddWorker()
         {
             InitializeComponent();

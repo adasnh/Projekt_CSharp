@@ -8,6 +8,9 @@ namespace WpfProjekt
 {
     class GiveAwayViewModel
     {
+        /// <summary>
+        /// Publiczne property klasy GiveAwayViewModel
+        /// </summary>
         public int id_zam { get; set; }
         public int id_art { get; set; }
         public int id_prac { get; set; }
@@ -15,6 +18,9 @@ namespace WpfProjekt
         public int ilosc_sztuk { get; set; }
         public DateTime data_wyd { get; set; }
 
+        /// <summary>
+        /// Publiczny Konstruktor klasy GiveAwayViewModel
+        /// </summary>
         public GiveAwayViewModel (GiveAway ga)
         {
             id_zam = ga.id_zamowienia;
